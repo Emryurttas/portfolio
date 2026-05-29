@@ -1,3 +1,7 @@
+import DarkModeToggle from "./DarkModeToggle";
+import "../styles/header.css";
+import "../styles/toggle.css";
+
 function Header({ darkMode, toggleDarkMode }) {
   return (
     <header className="header">
@@ -8,11 +12,7 @@ function Header({ darkMode, toggleDarkMode }) {
         <a href="#projects">Projets</a>
         <a href="#contact">Contact</a>
 
-        <div className="toggle-bar" onClick={toggleDarkMode}>
-          <span className="toggle-icon"></span>
-          <div className={`toggle-thumb ${darkMode ? "right" : "left"}`} />
-          <span className="toggle-icon"></span>
-        </div>
+        <DarkModeToggle darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       </nav>
     </header>
   );

@@ -1,3 +1,6 @@
+import "../styles/projects.css";
+
+
 function ProjectCard({ title, description, image, url, iconStyle }) {
   return (
     <a href={url} target="_blank" className="project-card">

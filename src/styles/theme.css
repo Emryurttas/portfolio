@@ -1,0 +1,37 @@
+.dark {
+  --text: white;
+  --subtle-text: #cbd5e1;
+  --card-bg: rgba(255,255,255,0.05);
+  --card-border: rgba(255,255,255,0.08);
+  --header-bg: rgba(15,23,42,0.6);
+  --header-border: rgba(255,255,255,0.08);
+  --shadow: rgba(0,0,0,0.3);
+
+  background:
+    radial-gradient(circle at top left, rgba(56,189,248,0.15), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(99,102,241,0.15), transparent 30%),
+    linear-gradient(135deg, #0f172a 0%, #111827 50%, #020617 100%);
+}
+
+.light {
+  --text: #0f172a;
+  --subtle-text: #475569;
+  --card-bg: rgba(255,255,255,0.85);
+  --card-border: rgba(0,0,0,0.08);
+  --header-bg: rgba(255,255,255,0.75);
+  --header-border: rgba(0,0,0,0.08);
+  --shadow: rgba(0,0,0,0.1);
+
+  background:
+    radial-gradient(circle at top left, rgba(56,189,248,0.1), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(99,102,241,0.1), transparent 30%),
+    linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #f8fafc 100%);
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: var(--text);
+}
