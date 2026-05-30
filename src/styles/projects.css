@@ -3,7 +3,7 @@
   text-align: center;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  font-size: 2rem;
+  font-size: clamp(1.4rem, 4vw, 2rem);
 }
 
 .projects-container {
@@ -13,13 +13,12 @@
   align-items: stretch;
   gap: 2rem;
   padding: 2rem;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  scrollbar-width: thin;
+  flex-wrap: wrap;
+  overflow-x: unset;        
 }
 
 .project-card {
-  width: 320px;
+  width: clamp(260px, 80vw, 320px);
   flex: 0 0 auto;
   background: var(--card-bg);
   border: 1px solid var(--card-border);
@@ -56,12 +55,26 @@
 
 .project-content h3 {
   margin-bottom: 0.5rem;
+  font-size: clamp(1rem, 3vw, 1.2rem);
 }
 
 .project-content p {
   color: var(--subtle-text);
-  font-size: 0.95rem;
+  font-size: clamp(0.85rem, 2.5vw, 0.95rem);
 }
+
 .light .project-content {
   border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 480px) {
+  .projects-container {
+    padding: 1rem;
+    gap: 1.2rem;
+  }
+
+  .project-card {
+    width: 100%;
+    max-width: 380px;
+  }
 }
