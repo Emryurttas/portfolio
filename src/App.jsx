@@ -7,6 +7,8 @@ import ProjectCard from "./components/ProjectCard";
 
 import project1 from "./images/sumo_cat.png";
 import project2 from "./images/appcalcul.png";
+import project3 from "./images/calculateur_emprunt.png";
+
 
 function App() {
   const [darkMode, setDarkMode] = useState(
@@ -41,6 +43,14 @@ function App() {
               image={project2}
               url="https://emryurttas.github.io/appcalcul_demo/"
               iconStyle={true}
+            />
+            <ProjectCard
+              title="Calculateur d'Intérêts"
+              description="Calculateur d'intérêts pour emprunts"
+              image={project3}
+              url="https://emryurttas.github.io/calcul_interet_emprunt/"
+              iconStyle={true}
+              largeImage={true}
             />
           </div>
         </section>
