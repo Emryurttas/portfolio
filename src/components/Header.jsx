@@ -8,7 +8,18 @@ function Header({ darkMode, toggleDarkMode }) {
       <h1 className="logo">Emre Yurttas</h1>
 
       <nav className="nav">
-        <DarkModeToggle darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+        <a
+          href="/portfolio/cv_emre_yurttas.pdf"
+          download
+          className="cv-button"
+        >
+          Télécharger mon CV
+        </a>
+
+        <DarkModeToggle
+          darkMode={darkMode}
+          toggleDarkMode={toggleDarkMode}
+        />
       </nav>
     </header>
   );
