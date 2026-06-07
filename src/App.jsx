@@ -4,16 +4,18 @@ import "./styles/theme.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ProjectCard from "./components/ProjectCard";
+import ChatMCPModal from "./components/ChatMCPModal";
 
 import project1 from "./images/sumo_cat.png";
 import project2 from "./images/appcalcul.png";
 import project3 from "./images/calculateur_emprunt.png";
-
+import project4 from "./images/chatmcp.png";
 
 function App() {
   const [darkMode, setDarkMode] = useState(
     () => localStorage.getItem("theme") !== "light"
   );
+  const [showChatModal, setShowChatModal] = useState(false);
 
   const toggleDarkMode = () => {
     setDarkMode(prev => {
@@ -52,9 +54,20 @@ function App() {
               iconStyle={true}
               largeImage={true}
             />
+            <ProjectCard
+              title="ChatMCP"
+              description="Chatbot IA avec support MCP"
+              image={project4}
+              onClick={() => setShowChatModal(true)}
+              chatPreview={true}
+            />
           </div>
         </section>
       </main>
+
+      {showChatModal && (
+        <ChatMCPModal onClose={() => setShowChatModal(false)} />
+      )}
 
       <Footer />
     </div>
