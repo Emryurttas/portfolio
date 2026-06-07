@@ -5,18 +5,21 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ProjectCard from "./components/ProjectCard";
 import ChatMCPModal from "./components/ChatMCPModal";
+import SymfonyModal from "./components/SymfonyModal";
 
 import project1 from "./images/sumo_cat.png";
 import project2 from "./images/appcalcul.png";
 import project3 from "./images/calculateur_emprunt.png";
 import project4 from "./images/chatmcp.png";
 import project5 from "./images/todo.png";
+import project6 from "./images/symfony.png";
 
 function App() {
   const [darkMode, setDarkMode] = useState(
     () => localStorage.getItem("theme") !== "light"
   );
   const [showChatModal, setShowChatModal] = useState(false);
+  const [showSymfonyModal, setShowSymfonyModal] = useState(false);
 
   const toggleDarkMode = () => {
     setDarkMode(prev => {
@@ -64,9 +67,17 @@ function App() {
             />
             <ProjectCard
               title="Todo List PWA"
-              description="Application de gestion de tâches PWA installable, réalisée avec React et Vite"              image={project5}
+              description="Application de gestion de tâches PWA installable, réalisée avec React et Vite"
+              image={project5}
               url="https://emryurttas.github.io/todo_list_pwa/"
               iconStyle={true}
+            />
+            <ProjectCard
+              title="Symfony For Sale"
+              description="Plateforme de petites annonces développée avec Symfony"
+              image={project6}
+              onClick={() => setShowSymfonyModal(true)}
+              chatPreview={true}
             />
           </div>
         </section>
@@ -74,6 +85,9 @@ function App() {
 
       {showChatModal && (
         <ChatMCPModal onClose={() => setShowChatModal(false)} />
+      )}
+      {showSymfonyModal && (
+        <SymfonyModal onClose={() => setShowSymfonyModal(false)} />
       )}
 
       <Footer />
