@@ -10,6 +10,7 @@ import project1 from "./images/sumo_cat.png";
 import project2 from "./images/appcalcul.png";
 import project3 from "./images/calculateur_emprunt.png";
 import project4 from "./images/chatmcp.png";
+import project5 from "./images/todo.png";
 
 function App() {
   const [darkMode, setDarkMode] = useState(
@@ -60,6 +61,12 @@ function App() {
               image={project4}
               onClick={() => setShowChatModal(true)}
               chatPreview={true}
+            />
+            <ProjectCard
+              title="Todo List PWA"
+              description="Application de gestion de tâches PWA installable, réalisée avec React et Vite"              image={project5}
+              url="https://emryurttas.github.io/todo_list_pwa/"
+              iconStyle={true}
             />
           </div>
         </section>
