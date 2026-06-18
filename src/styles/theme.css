@@ -6,11 +6,6 @@
   --header-bg: rgba(15,23,42,0.6);
   --header-border: rgba(255,255,255,0.08);
   --shadow: rgba(0,0,0,0.3);
-
-  background:
-    radial-gradient(circle at top left, rgba(56,189,248,0.15), transparent 30%),
-    radial-gradient(circle at bottom right, rgba(99,102,241,0.15), transparent 30%),
-    linear-gradient(135deg, #0f172a 0%, #111827 50%, #020617 100%);
 }
 
 .light {
@@ -21,11 +16,6 @@
   --header-bg: rgba(255,255,255,0.75);
   --header-border: rgba(0,0,0,0.08);
   --shadow: rgba(0,0,0,0.1);
-
-  background:
-    radial-gradient(circle at top left, rgba(56,189,248,0.1), transparent 30%),
-    radial-gradient(circle at bottom right, rgba(99,102,241,0.1), transparent 30%),
-    linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #f8fafc 100%);
 }
 
 .app {
@@ -34,4 +24,7 @@
   display: flex;
   flex-direction: column;
   color: var(--text);
+  background: transparent;
+  position: relative;
+  z-index: 1;
 }

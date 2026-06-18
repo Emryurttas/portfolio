@@ -32,7 +32,6 @@
 
 .project-card:hover {
   transform: translateY(-10px);
-  border-color: rgba(56,189,248,0.4);
 }
 
 .project-card img {

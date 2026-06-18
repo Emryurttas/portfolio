@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import ProjectCard from "./components/ProjectCard";
 import ChatMCPModal from "./components/ChatMCPModal";
 import SymfonyModal from "./components/SymfonyModal";
+import StarfieldBackground from "./components/StarfieldBackground";
 
 import project1 from "./images/sumo_cat.png";
 import project2 from "./images/appcalcul.png";
@@ -22,7 +23,7 @@ function App() {
   const [showSymfonyModal, setShowSymfonyModal] = useState(false);
 
   const toggleDarkMode = () => {
-    setDarkMode(prev => {
+    setDarkMode((prev) => {
       localStorage.setItem("theme", !prev ? "dark" : "light");
       return !prev;
     });
@@ -30,58 +31,60 @@ function App() {
 
   return (
     <div className={`app ${darkMode ? "dark" : "light"}`}>
+      <StarfieldBackground darkMode={darkMode} />
+
       <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
 
       <main>
         <section id="projects">
-          <h2 className="section-title">Mes Projets</h2>
+            <h2 className="section-title">Mes Projets</h2>
 
-          <div className="projects-container">
-            <ProjectCard
-              title="Sumo Cats"
-              description="Jeu de combat de chats"
-              image={project1}
-              url="https://emryurttas.github.io/SumoCats-pages/"
-            />
-            <ProjectCard
-              title="App Calcul"
-              description="Application de calcul mentale réalisée avec Flutter"
-              image={project2}
-              url="https://emryurttas.github.io/appcalcul_demo/"
-              iconStyle={true}
-            />
-            <ProjectCard
-              title="Calculateur d'Intérêts"
-              description="Calculateur d'intérêts pour emprunts"
-              image={project3}
-              url="https://emryurttas.github.io/calcul_interet_emprunt/"
-              iconStyle={true}
-              largeImage={true}
-            />
-            <ProjectCard
-              title="ChatMCP"
-              description="Chatbot IA avec support MCP"
-              image={project4}
-              onClick={() => setShowChatModal(true)}
-              chatPreview={true}
-            />
-            <ProjectCard
-              title="Todo List PWA"
-              description="Application de gestion de tâches PWA installable, réalisée avec React et Vite"
-              image={project5}
-              url="https://todo-list-pwa-ten.vercel.app/"
-              iconStyle={true}
-            />
-            <ProjectCard
-              title="Symfony For Sale"
-              description="Plateforme de petites annonces développée avec Symfony"
-              image={project6}
-              onClick={() => setShowSymfonyModal(true)}
-              chatPreview={true}
-            />
-          </div>
-        </section>
-      </main>
+            <div className="projects-container">
+              <ProjectCard
+                title="Sumo Cats"
+                description="Jeu de combat de chats"
+                image={project1}
+                url="https://emryurttas.github.io/SumoCats-pages/"
+              />
+              <ProjectCard
+                title="App Calcul"
+                description="Application de calcul mentale réalisée avec Flutter"
+                image={project2}
+                url="https://emryurttas.github.io/appcalcul_demo/"
+                iconStyle={true}
+              />
+              <ProjectCard
+                title="Calculateur d'Intérêts"
+                description="Calculateur d'intérêts pour emprunts"
+                image={project3}
+                url="https://emryurttas.github.io/calcul_interet_emprunt/"
+                iconStyle={true}
+                largeImage={true}
+              />
+              <ProjectCard
+                title="ChatMCP"
+                description="Chatbot IA avec support MCP"
+                image={project4}
+                onClick={() => setShowChatModal(true)}
+                chatPreview={true}
+              />
+              <ProjectCard
+                title="Todo List PWA"
+                description="Application de gestion de tâches PWA installable, réalisée avec React et Vite"
+                image={project5}
+                url="https://todo-list-pwa-ten.vercel.app/"
+                iconStyle={true}
+              />
+              <ProjectCard
+                title="Symfony For Sale"
+                description="Plateforme de petites annonces développée avec Symfony"
+                image={project6}
+                onClick={() => setShowSymfonyModal(true)}
+                chatPreview={true}
+              />
+            </div>
+          </section>
+        </main>
 
       {showChatModal && (
         <ChatMCPModal onClose={() => setShowChatModal(false)} />
