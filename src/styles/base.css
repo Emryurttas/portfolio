@@ -17,8 +17,37 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
 }
+
 @media (max-width: 768px) {
   body {
     font-size: 15px;
+  }
+}
+
+@media (min-width: 769px) {
+  html, body, #root {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  main {
+    flex: 1;
+    display: flex;
+    min-height: 0;
+    overflow-y: auto;
+  }
+
+  #projects {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 0;
   }
 }

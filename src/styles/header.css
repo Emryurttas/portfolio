@@ -39,3 +39,9 @@
   color: #38bdf8;
   opacity: 1;
 }
+
+@media (min-width: 769px) {
+  .header {
+    padding: 0.6rem 2rem;
+  }
+}
