@@ -27,11 +27,18 @@
   font-size: 0.95rem;
   opacity: 0.8;
   transition: 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .socials a:hover {
   color: #38bdf8;
   opacity: 1;
+}
+
+.socials svg {
+  font-size: 22px;
 }
 
 .copyright {

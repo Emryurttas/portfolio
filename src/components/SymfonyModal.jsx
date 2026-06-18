@@ -7,8 +7,13 @@ function SymfonyModal({ onClose }) {
         </button>
 
         <h2>Symfony For Sale</h2>
+
         <p className="modal-subtitle">
           Plateforme de petites annonces développée avec Symfony
+        </p>
+
+        <p style={{ fontSize: "0.8rem", opacity: 0.6, marginTop: "0.25rem" }}>
+          Le backend est hébergé sur Render en mode gratuit, il peut nécessiter quelques secondes de démarrage.
         </p>
 
         <div className="modal-section">
@@ -23,6 +28,7 @@ function SymfonyModal({ onClose }) {
 
         <div className="modal-section">
           <h3>Connexion</h3>
+
           <p style={{ fontSize: "0.85rem", marginBottom: "0.5rem" }}>
             Mot de passe universel : <code>test</code>
           </p>
@@ -48,20 +54,20 @@ function SymfonyModal({ onClose }) {
         <div className="modal-section">
           <h3>Notes</h3>
           <ul>
-            <li>&#9888;&#65039; Les admins accèdent à toutes les fonctionnalités</li>
-            <li>&#8505;&#65039; Les comptes user1 à user11 sont vérifiés</li>
-            <li>&#10060; unverified1-4@example.com sont non vérifiés</li>
+            <li>⚠️ Les admins accèdent à toutes les fonctionnalités</li>
+            <li>ℹ️ Les comptes user1 à user11 sont vérifiés</li>
+            <li>❌ unverified1-4@example.com sont non vérifiés</li>
           </ul>
         </div>
 
         <div className="modal-actions">
           <a
-            href="https://symfony-for-sale.onrender.com/advertisement"
+            href="https://symfony-for-sale-hl69.onrender.com/advertisement"
             target="_blank"
             rel="noopener noreferrer"
             className="modal-btn-primary"
           >
-            Accéder au projet &#8594;
+            Accéder au projet →
           </a>
 
           <button className="modal-btn-secondary" onClick={onClose}>

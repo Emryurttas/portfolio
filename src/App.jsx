@@ -69,7 +69,7 @@ function App() {
               title="Todo List PWA"
               description="Application de gestion de tâches PWA installable, réalisée avec React et Vite"
               image={project5}
-              url="https://emryurttas.github.io/todo_list_pwa/"
+              url="https://todo-list-pwa-ten.vercel.app/"
               iconStyle={true}
             />
             <ProjectCard

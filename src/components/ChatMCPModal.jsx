@@ -7,8 +7,13 @@ function ChatMCPModal({ onClose }) {
         </button>
 
         <h2>ChatMCP</h2>
+
         <p className="modal-subtitle">
           Chatbot IA avec streaming et outils MCP
+        </p>
+
+        <p style={{ fontSize: "0.8rem", opacity: 0.6, marginTop: "0.25rem" }}>
+          Le backend est hébergé sur Render en mode gratuit, il peut nécessiter quelques secondes de démarrage.
         </p>
 
         <div className="modal-section">
@@ -21,6 +26,7 @@ function ChatMCPModal({ onClose }) {
 
         <div className="modal-section">
           <h3>Connexion</h3>
+
           <div className="modal-credentials">
             <div>
               <span className="label">Utilisateur 1</span>
@@ -41,18 +47,18 @@ function ChatMCPModal({ onClose }) {
         <div className="modal-section">
           <h3>Limitations</h3>
           <ul>
-            <li>&#9888;&#65039; 20 requêtes par jour (quota Gemini gratuit)</li>
+            <li>⚠️ 20 requêtes par jour (quota Gemini gratuit)</li>
           </ul>
         </div>
 
         <div className="modal-actions">
           <a
-            href="https://chatmcp.onrender.com/"
+            href="https://chatmcp-5evu.onrender.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="modal-btn-primary"
           >
-            Accéder au projet &#8594;
+            Accéder au projet →
           </a>
 
           <button className="modal-btn-secondary" onClick={onClose}>
