@@ -95,7 +95,12 @@ export default function StarfieldBackground({ darkMode }) {
       animRef.current = requestAnimationFrame(draw);
     }
 
+    let lastW = window.innerWidth;
+
     function onResize() {
+      const newW = window.innerWidth;
+      if (newW === lastW) return;
+      lastW = newW;
       cancelAnimationFrame(animRef.current);
       init();
       draw();
@@ -122,6 +127,7 @@ export default function StarfieldBackground({ darkMode }) {
         height: "100%",
         zIndex: -1,
         pointerEvents: "none",
+        touchAction: "none",
         display: "block",
       }}
       aria-hidden="true"
