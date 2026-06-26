@@ -37,7 +37,7 @@ function App() {
 
       <main>
         <section id="projects">
-            <h2 className="section-title">Mes Projets</h2>
+            <h2 className="section-title">Mes réalisations</h2>
 
             <div className="projects-container">
               <ProjectCard
